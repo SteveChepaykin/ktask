@@ -13,8 +13,8 @@ class InforowWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(title),
             Text(info),
+            Text(title),
           ],
         ),
       );

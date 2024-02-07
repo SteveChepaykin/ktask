@@ -9,7 +9,7 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(120, 204, 255, 255),
+      backgroundColor: Colors.white,
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(

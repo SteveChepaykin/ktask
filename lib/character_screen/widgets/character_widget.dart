@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ktest/details_screen.dart/details_screen.dart';
+import 'package:ktest/details_screen/details_screen.dart';
 import 'package:ktest/src/models/character.dart';
 
 class CharacterWidget extends StatelessWidget {

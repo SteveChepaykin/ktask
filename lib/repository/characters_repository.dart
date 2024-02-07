@@ -1,4 +1,4 @@
-import 'package:ktest/src/data/models/character.dart';
+import 'package:ktest/src/models/character.dart';
 
 abstract class CharactersRepository {
   Future<List<Character>?> getCharacters(int page);
