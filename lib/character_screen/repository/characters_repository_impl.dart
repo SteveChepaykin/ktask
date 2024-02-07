@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:ktest/src/data/models/character.dart';
-import 'package:ktest/src/data/repository/characters_repository.dart';
+import 'package:ktest/character_screen/repository/characters_repository.dart';
 import 'package:http/http.dart';
 
 class CharactersRepositoryImpl implements CharactersRepository {

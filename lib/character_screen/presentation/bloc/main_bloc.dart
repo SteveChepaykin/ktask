@@ -1,6 +1,6 @@
-import 'package:ktest/src/data/repository/characters_repository.dart';
-import 'package:ktest/src/presentation/bloc/main_event.dart';
-import 'package:ktest/src/presentation/bloc/main_state.dart';
+import 'package:ktest/character_screen/repository/characters_repository.dart';
+import 'package:ktest/character_screen/presentation/bloc/main_event.dart';
+import 'package:ktest/character_screen/presentation/bloc/main_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MainPageBloc

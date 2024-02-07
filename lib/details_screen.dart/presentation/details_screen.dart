@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ktest/details_screen.dart/presentation/widgets/inforow_widget.dart';
 import 'package:ktest/src/data/models/character.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -20,32 +21,34 @@ class DetailsScreen extends StatelessWidget {
                 height: 200,
                 child: Image.network(character.image),
               ),
-              const SizedBox(height: 10,),
+              const SizedBox(
+                height: 10,
+              ),
               Text(character.name),
-              const SizedBox(height: 10,),
+              const SizedBox(
+                height: 10,
+              ),
               Text('${character.species} • ${character.gender} • ${character.type}'),
-              const SizedBox(height: 10,),
-              inforow('Status:', character.status),
-              const SizedBox(height: 10,),
-              inforow('Origin:', character.origin),
-              const SizedBox(height: 10,),
-              inforow('Location:', character.location),
+              const SizedBox(
+                height: 10,
+              ),
+              InforowWidget('Status:', character.status),
+              const SizedBox(
+                height: 10,
+              ),
+              InforowWidget('Origin:', character.origin),
+              const SizedBox(
+                height: 10,
+              ),
+              InforowWidget('Location:', character.location),
+              const SizedBox(
+                height: 10,
+              ),
+              InforowWidget('Number of episodes:', character.episodes.length.toString()),
             ],
           ),
         ),
       ),
     );
   }
-
-  Widget inforow(String title, String info) => Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 0),
-    child: Row(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(title),
-        Text(info),
-      ],
-    ),
-  );
 }

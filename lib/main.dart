@@ -1,5 +1,5 @@
 import 'package:ktest/src/di/main_di_module.dart';
-import 'package:ktest/src/presentation/ui/character_screen.dart';
+import 'package:ktest/character_screen/presentation/character_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
