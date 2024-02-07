@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ktest/details_screen.dart/presentation/widgets/inforow_widget.dart';
-import 'package:ktest/src/data/models/character.dart';
+import 'package:ktest/details_screen//widgets/inforow_widget.dart';
+import 'package:ktest/src/models/character.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Character character;

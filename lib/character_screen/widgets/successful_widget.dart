@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ktest/character_screen/presentation/widgets/character_widget.dart';
-import 'package:ktest/src/data/models/character.dart';
+import 'package:ktest/character_screen/widgets/character_widget.dart';
+import 'package:ktest/src/models/character.dart';
 
 class SuccessfulWidget extends StatelessWidget {
   final List<Character> characters;

@@ -1,6 +1,6 @@
-import 'package:ktest/character_screen/repository/characters_repository.dart';
-import 'package:ktest/character_screen/presentation/bloc/main_event.dart';
-import 'package:ktest/character_screen/presentation/bloc/main_state.dart';
+import 'package:ktest/repository/characters_repository.dart';
+import 'package:ktest/character_screen/bloc/main_event.dart';
+import 'package:ktest/character_screen/bloc/main_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MainPageBloc
@@ -11,7 +11,11 @@ class MainPageBloc
     MainPageState initialState,
     this._charactersRepository,
   ) : super(initialState) {
-    on<GetTestDataOnMainPageEvent>(
+    _handelEvent();
+  }
+
+  void _handelEvent() {
+    on<GetDataOnMainPageEvent>(
       (event, emitter) => _getDataOnMainPageCasino(event, emitter),
     );
     on<DataLoadedOnMainPageEvent>(
@@ -34,7 +38,7 @@ class MainPageBloc
   }
 
   Future<void> _getDataOnMainPageCasino(
-    GetTestDataOnMainPageEvent event,
+    GetDataOnMainPageEvent event,
     Emitter<MainPageState> emit,
   ) async {
     _charactersRepository.getCharacters(event.page).then(

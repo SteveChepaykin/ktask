@@ -1,11 +1,11 @@
-import 'package:ktest/character_screen/presentation/widgets/loading_widget.dart';
-import 'package:ktest/character_screen/presentation/widgets/successful_widget.dart';
-import 'package:ktest/character_screen/repository/characters_repository.dart';
-import 'package:ktest/character_screen/presentation/bloc/main_bloc.dart';
-import 'package:ktest/character_screen/presentation/bloc/main_event.dart';
-import 'package:ktest/character_screen/presentation/bloc/main_state.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ktest/character_screen/bloc/main_bloc.dart';
+import 'package:ktest/character_screen/widgets/loading_widget.dart';
+import 'package:ktest/character_screen/widgets/successful_widget.dart';
+import 'package:ktest/repository/characters_repository.dart';
+import 'package:ktest/character_screen/bloc/main_event.dart';
+import 'package:ktest/character_screen/bloc/main_state.dart';
+import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
 @immutable
@@ -19,7 +19,7 @@ class CharactersScreen extends StatelessWidget {
         create: (context) => MainPageBloc(
           InitialMainPageState(),
           GetIt.I.get<CharactersRepository>(),
-        )..add(const GetTestDataOnMainPageEvent(0)),
+        )..add(const GetDataOnMainPageEvent(0)),
         child: BlocConsumer<MainPageBloc, MainPageState>(
           listener: (context, state) {},
           builder: (blocContext, state) {

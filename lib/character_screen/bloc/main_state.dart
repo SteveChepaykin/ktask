@@ -1,4 +1,4 @@
-import 'package:ktest/src/data/models/character.dart';
+import 'package:ktest/src/models/character.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class MainPageState extends Equatable {}

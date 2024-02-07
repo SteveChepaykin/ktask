@@ -1,4 +1,4 @@
-import 'package:ktest/src/data/models/character.dart';
+import 'package:ktest/src/models/character.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class MainPageEvent extends Equatable {
@@ -8,10 +8,10 @@ abstract class MainPageEvent extends Equatable {
   List<Object?> get props => [];
 }
 
-class GetTestDataOnMainPageEvent extends MainPageEvent {
+class GetDataOnMainPageEvent extends MainPageEvent {
   final int page;
 
-  const GetTestDataOnMainPageEvent(this.page);
+  const GetDataOnMainPageEvent(this.page);
 
   @override
   List<Object?> get props => [];

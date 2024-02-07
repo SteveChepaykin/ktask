@@ -1,5 +1,5 @@
-import 'package:ktest/character_screen/repository/characters_repository.dart';
-import 'package:ktest/character_screen/repository/characters_repository_impl.dart';
+import 'package:ktest/repository/characters_repository.dart';
+import 'package:ktest/repository/characters_repository_impl.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart';
 
@@ -8,6 +8,11 @@ class MainDIModule {
     final httpClient = Client();
 
     getIt.registerLazySingleton<CharactersRepository>(
-        () => CharactersRepositoryImpl(httpClient));
+      () => CharactersRepositoryImpl(httpClient),
+    );
+
+    // getIt.registerLazySingleton<CharactersRepository>(
+    //   () => CharactersTestRepositoryImpl(),
+    // );
   }
 }
